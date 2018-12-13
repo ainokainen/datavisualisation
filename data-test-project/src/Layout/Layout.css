@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+.Header {
+    background-color: #ccc;
+    padding: 0.5em;
+    text-align: center;
+}
+.LeftSide {
+    float:left;
+    width:60%;
+    padding: 1em;
+}
+.LeftSideDiagram {
+    float:left;
+    width:60%;
+    height: 60%;
+    padding: 1em;
+}
+.Row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.RightSide {
+    float:right;
+    width: 30%;
+    padding: 1em;
+} @media screen and (max-width: 600px) {
+    .LeftSide, .RightSide {
+        width:100%;
+    }
+}
