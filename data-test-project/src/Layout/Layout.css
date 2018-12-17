@@ -1,29 +1,29 @@
 * {
     box-sizing: border-box;
 }
-.Header {
-    background-color: #ccc;
+.header {
+    background-color: '#7ed32';
     padding: 0.5em;
     text-align: center;
 }
-.LeftSide {
+.left-side {
     float:left;
     width:60%;
     padding: 1em;
 }
-.LeftSideDiagram {
+.left-side-diagram {
     float:left;
     width:60%;
     height: 60%;
     padding: 1em;
     margin-right: 1em;
 }
-.Row::after {
+.row::after {
     content: '';
     display: table;
     clear: both;
 }
-.RightSide {
+.right-side {
     float:right;
     width: 30%;
     padding: 1em;
@@ -31,7 +31,7 @@
     text-align: justify;
 } 
 @media screen and (max-width: 600px) {
-    .LeftSide, .RightSide {
+    .left-side, .right-side {
         width:100%;
     }
 }

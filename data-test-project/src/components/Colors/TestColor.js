@@ -4,6 +4,7 @@ class TestColor extends Component {
     constructor (props) {
         super(props)
         this.state= {
+            color: '',
             hex:'fff',
             lum:0
         };
