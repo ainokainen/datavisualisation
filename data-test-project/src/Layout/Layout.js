@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChartWindow from '../containers/ChartWindow';
+import Info from "../components/Info/Info";
 import './Layout.css';
 
 class Layout extends Component {
@@ -12,10 +13,11 @@ class Layout extends Component {
                         <div>Diagram Window
                         <ChartWindow/>  
                         </div>        
-                        <div>Interaction settings</div> 
+                        <div>Interaction settings
+                        </div> 
                     </div>
                 <div className='RightSide'>
-                    <div>Info</div>
+                    <Info/>
                     <div>Data thingies</div>
                 </div>
                 </div>
