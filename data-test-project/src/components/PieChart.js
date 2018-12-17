@@ -4,6 +4,8 @@ import { tsvParse } from "d3-dsv";
 
 import dataTsv from './dataTsv';
 
+import './PieChart.css';
+
 const width= 480,
     height= 250,
     radius= Math.min(width,height)/2;
@@ -12,8 +14,8 @@ const arc= d3Arc()
     .outerRadius(radius-25)
     .innerRadius(radius-80);
 const textarc= d3Arc()
-    .innerRadius(radius-22)
-    .outerRadius(radius-0);
+    .innerRadius(radius-11)
+    .outerRadius(radius-10);
 
 const pie= d3Pie()
     .sort(null)
@@ -39,7 +41,7 @@ class PieChart extends Component {
                 {data.map(d => (
                     <g key={`a${d.data.letter}`}>
                     <path className="arc" d={arc(d)} fill={this.props.color(d.data.letter)}/>
-                    <text
+                    <text className='PieText'
                         transform=
                         {`translate(${textarc.centroid(d)})`}
                         dy =".25em">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { scaleOrdinal } from 'd3-scale';
 
 const color1 = scaleOrdinal().range([
