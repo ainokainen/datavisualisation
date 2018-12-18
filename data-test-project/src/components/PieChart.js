@@ -36,7 +36,9 @@ class PieChart extends Component {
   render() {
     return (
         <div>
-        <svg width={width} height={height}>
+        <svg xlmns='http://www.w3.org/2000/svg' viewBox='0 0 500 270'
+            preserveAspectRatio='xMidYMin slice'
+            width='100%' height='100%' overflow='none'>
             <g transform={`translate(${width/2}, ${height/2})`}>
                 {data.map(d => (
                     <g key={`a${d.data.letter}`}>

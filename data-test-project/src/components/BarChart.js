@@ -8,14 +8,15 @@ import dataTsv from './dataTsv';
 
 const svgWidth=480, svgHeight=250;
 
-const margin = {top:20, right:20, bottom:30, left:40},
+ const margin = {top:20, right:20, bottom:30, left:40},
   width = svgWidth-margin.left  - margin.right,
-  height= svgHeight- margin.top - margin.bottom;
+  height= svgHeight- margin.top - margin.bottom; 
 
-const x = scaleBand()
+ const x = scaleBand()
   .rangeRound([0,width])
   .padding(0,1),
-  y= scaleLinear().rangeRound([height,0]);
+  y= scaleLinear().rangeRound([height,0]); 
+
 
 const data = tsvParse(dataTsv, d=> {
   d.frequency =+d.frequency;
@@ -29,22 +30,19 @@ class BarChart extends Component {
   render() {
     return (
     <div>
-    <div>
       <p  y="6" dy="0.71em" textAnchor="end">
         Frequency
       </p>
-    </div>
-    <svg width={svgWidth} height={svgHeight}>
-    <g transform = {`translate(${margin.left}, ${margin.top})`}>
-      <g 
-        className="axis axis--x"
-        transform={`translate(0,${height})`}
-        ref={node =>select(node).call(axisBottom(x))}
+      <svg  xlmns='http://www.w3.org/2000/svg' viewBox='0 0 500 270'
+            preserveAspectRatio='xMidYMin slice'
+            width='100%' height='100%' overflow='none'>
+        <g transform = {`translate(${margin.left}, ${margin.top})`}>
+        <g className="axis axis--x"
+            transform={`translate(0,${height})`}
+            ref={node =>select(node).call(axisBottom(x))}
         />
       <g className="axis axis--y">
-
-      <g ref={node => select(node).call(axisLeft(y).ticks(10,'%'))}/>
-    
+        <g ref={node => select(node).call(axisLeft(y).ticks(10,'%'))}/>
       </g>
         {data.map((d) =>(
           <rect
@@ -57,7 +55,10 @@ class BarChart extends Component {
         />
       ))}
       </g>
-    </svg>
+      </svg>
+      <p  y="6" dy="0.71em" textAnchor="end">
+        Letter
+      </p>
     </div>
     );
   }

@@ -136,22 +136,29 @@ class ChartWindow extends Component {
     render() {
         return (
             <div>
-            {this.state.showchart === 'Chart1'&&<BarChart color={this.state.showColors}  />}
-            {this.state.showchart === 'Chart2'&&<PieChart color={this.state.showColors} />}
-            <Button clicked= {()=> this.changeChart('BarChart')}>Show Barchart</Button>
-            <Button clicked= {()=> this.changeChart('PieChart')}>Show Piechart</Button>
-            <Button clicked= {()=> this.changeColors('Theme1')}>Colors 1</Button>
-            <Button clicked= {()=> this.changeColors('Theme2')}>Colors 2</Button>  
-            <Button clicked= {()=> this.changeColors('Theme3')}>Colors 3</Button>  
-            <Button clicked= {()=> this.changeColors('Theme4')}>Colors 4</Button>  
-            <Button clicked= {()=> this.changeColors('Theme5')}>Monochromatic</Button>  
-            <Button clicked= {()=> this.changeColors('Theme6')}>Spice it with random</Button>  
-            <SketchPicker
-                hex= {this.state.color.hex}
-                color = { this.state.color }
-                colorRgb = { this.state.colorRgb }
-                onChange= { this.handleChangeComplete }
-            />
+                {this.state.showchart === 'Chart1'&&<BarChart color={this.state.showColors}  />}
+                {this.state.showchart === 'Chart2'&&<PieChart color={this.state.showColors} />}
+            <div>
+            <h3>Interaction settings</h3>
+                <Button clicked= {()=> this.changeChart('BarChart')}>Show Barchart</Button>
+                <Button clicked= {()=> this.changeChart('PieChart')}>Show Piechart</Button>
+            </div>
+            <div>
+                <Button clicked= {()=> this.changeColors('Theme1')}>Colors 1</Button>
+                <Button clicked= {()=> this.changeColors('Theme2')}>Colors 2</Button>  
+                <Button clicked= {()=> this.changeColors('Theme3')}>Colors 3</Button>  
+                <Button clicked= {()=> this.changeColors('Theme4')}>Colors 4</Button>  
+                <Button clicked= {()=> this.changeColors('Theme5')}>Monochromatic</Button>  
+                <Button clicked= {()=> this.changeColors('Theme6')}>Spice it with random</Button>  
+            </div>
+            <div>
+                <SketchPicker
+                    hex= {this.state.color.hex}
+                    color = { this.state.color }
+                    colorRgb = { this.state.colorRgb }
+                    onChange= { this.handleChangeComplete }
+                />
+            </div>
             </div>
         );
     }
