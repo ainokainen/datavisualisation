@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChartWindow from '../containers/ChartWindow';
 import Info from "../components/Info/Info";
 import './Layout.css';
+import DataForm from '../components/DataForm';
 
 class Layout extends Component {
     render() {
@@ -21,7 +22,7 @@ class Layout extends Component {
                      <div className='right-side'>
                         <Info />
                         <div>
-                            <h3>Data thingies</h3>
+                            <DataForm />
                             <p>Headline</p>
                             <p>X-value</p>
                             <p>Y-value</p>
