@@ -1,37 +1,59 @@
-* {
+ * {
     box-sizing: border-box;
 }
-.Header {
-    background-color: #ccc;
+/* .flex-container {
+    display: flex;
+} */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.header {
+    background: rgb(175, 236, 51);
+    color: white;
     padding: 0.5em;
     text-align: center;
 }
-.LeftSide {
-    float:left;
-    width:60%;
-    padding: 1em;
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
-.LeftSideDiagram {
-    float:left;
-    width:60%;
-    height: 60%;
+.side {
+    flex: 60%;
     padding: 1em;
-    margin-right: 1em;
+    background-color: #f1f1f1;
 }
-.Row::after {
-    content: '';
-    display: table;
-    clear: both;
+.chart-window {
+    background-color: #aaa;
+    width: 100%;
+    padding: 0.5em;
 }
-.RightSide {
-    float:right;
-    width: 30%;
-    padding: 1em;
-    margin-left: 0.5em;
-    text-align: justify;
+.right-side {
+    flex: 40%;
+    background-color: white;
+    padding: 0.5em;
+}
+.footer {
+    padding: 0.5em;
+    text-align: center;
+    background: #ddd;
 } 
-@media screen and (max-width: 600px) {
-    .LeftSide, .RightSide {
-        width:100%;
+/* .scaling-svg-container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 100%
+}
+.scaling-svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+} */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
     }
 }
