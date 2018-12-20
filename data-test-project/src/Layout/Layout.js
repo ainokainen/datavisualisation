@@ -3,6 +3,7 @@ import ChartWindow from '../containers/ChartWindow';
 import Info from "../components/Info/Info";
 import './Layout.css';
 import DataForm from '../components/DataForm';
+import ChartView from '../components/ChartView';
 
 class Layout extends Component {
     render() {
@@ -14,6 +15,7 @@ class Layout extends Component {
                     <div className='side'>
                         <h3>Diagram Window</h3>
                             <div className='diagram-window'>
+                                <ChartView />
                                 <ChartWindow /> 
                             </div>        
                             <div>Interaction settings

@@ -1,12 +1,14 @@
 import Axios from 'axios';
-var localhost = "https://localhost:63377";
+var localhost = "http://localhost:63377";
 
 export function AddNewChart() {
     //adding a new chart
 }
 
-export function GetChartAndContent() {
-    //get chart by id 
+export function GetCharts(callback) {
+    Axios.get(localhost + "/api/Chart").then(response => {
+        callback(response.data);
+    })
 }
 
 
