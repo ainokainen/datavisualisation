@@ -1,0 +1,36 @@
+.dropButton {
+    background-color: teal;
+    padding: 1em;
+    font-size: 100%;
+    border: none;
+}
+
+.dropMenu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    display: none;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropContent a {
+    color: black;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropContent a:hover {
+    background-color: midnightblue;
+}
+
+.dropMenu:hover .dropContent {
+    display: block;
+}
+
+.dropMenu:hover .dropButton {
+    background-color: darkslateblue;
+}

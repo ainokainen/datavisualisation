@@ -15,7 +15,6 @@ class Layout extends Component {
                     <div className='side'>
                         <h3>Diagram Window</h3>
                             <div className='diagram-window'>
-                                <ChartView />
                                 <ChartWindow /> 
                             </div>        
                             <div>Interaction settings
@@ -29,6 +28,7 @@ class Layout extends Component {
                             <p>X-value</p>
                             <p>Y-value</p>
                             <p>Text field for data</p>
+                                <ChartView />
                         </div>
                     </div>
                 </div>
